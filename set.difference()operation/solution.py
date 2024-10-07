@@ -1,11 +1,12 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 
+
 def main() -> None:
     # english newspaper input
-    n: int = int(input())
+    n: int = int(input())  # noqa: F841
     engRollNum: set = set(map(int, input().split()))
     # french newspaper input
-    m: int = int(input())
+    m: int = int(input())  # noqa: F841
     frRollNum: set = set(map(int, input().split()))
     # function call
     result: int = setDifferenceLength(engRollNum, frRollNum)
@@ -17,5 +18,5 @@ def setDifferenceLength(eng: set, fr: set) -> int:
     return len(eng.difference(fr))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
